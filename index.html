@@ -3,14 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DB Calculator</title>
+    <title>Dave and Busters Ticket Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <h1>Welcome to DB Calculator</h1>
-    <div id="calculator">
-        <!-- Your calculator structure (e.g., input fields, buttons) -->
+
+    <div class="container">
+        <div class="header">
+            <img src="dave-busters-logo.png" alt="Dave and Busters Logo">
+            <h1>Dave and Busters Ticket Calculator</h1>
+            <img src="dave-busters-logo.png" alt="Dave and Busters Logo">
+        </div>
+
+        <div class="calculator">
+            <div class="input-section">
+                <div>
+                    <label># tickets earned per game</label>
+                    <input type="number" id="ticketsPerGame" value="250">
+                </div>
+                <div>
+                    <label># coins per game</label>
+                    <input type="number" id="coinsPerGame" value="3.8">
+                </div>
+            </div>
+
+            <div class="payment-section">
+                <div class="input-row">
+                    <label>I paid</label>
+                    <input type="number" id="paidDollars" value="22">
+                    <span>Dollars</span>
+                </div>
+                <div class="input-row">
+                    <label>For</label>
+                    <input type="number" id="chips" value="200">
+                    <span>Chips</span>
+                </div>
+            </div>
+
+            <div class="cost-section">
+                <p>Cost of 1 coin: $<span id="costPerCoin">0.11</span></p>
+                <p>Cost of 100 coins: $<span id="costPer100Coins">11.00</span></p>
+                <p>Cost of 1 ticket: $<span id="costPerTicket">0.0017</span></p>
+                <p>Cost of 2000 tickets: $<span id="costPer2000Tickets">3.34</span></p>
+            </div>
+
+            <div class="prize-section">
+                <h2>Prize Calculations</h2>
+                <div class="input-row">
+                    <label>Cost of prize on Amazon</label>
+                    <input type="number" id="amazonCost" value="200">
+                </div>
+                <div class="input-row">
+                    <label># tickets needed</label>
+                    <input type="number" id="ticketsNeeded" value="55000">
+                </div>
+
+                <p>Dollar equivalent: $<span id="dollarEquivalent">91.96</span></p>
+                <p>Dollar amount saved: $<span id="dollarSaved">108.04</span></p>
+                <p>% saved: <span id="percentSaved">54.02%</span></p>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
